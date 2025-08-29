@@ -1,0 +1,101 @@
+import { useState, useEffect } from "react"
+import { useParams } from 'react-router-dom'
+import { getImages } from "../../components/utils/get_images"
+import {
+    getMovieById,
+    getMovieVideos,
+    getMovieCredits,
+    getMovieSimilar,
+} from "../../services/getData"
+import { Container, Background, Cover, Info, ContainerMovies } from "./styles"
+import SpanGenres from "../../components/SpanGenres"
+import Credits from "../../components/Credits"
+import Slider from '../../components/Slider/'
+
+function Detail() {
+    const { id } = useParams()
+
+
+    const [movie, setMovie] = useState()
+    const [movieVideos, setMovieVideos] = useState()
+    const [movieCredits, setMovieCredits] = useState()
+    const [movieSimilar, setMovieSimilar] = useState()
+
+
+
+
+    useEffect(() => {
+        async function getAllData() {
+            Promise.all([
+                getMovieById(id),
+                getMovieVideos(id),
+                getMovieCredits(id),
+                getMovieSimilar(id),
+
+
+            ])
+                .then(([movie, videos, credits, similar]) => {
+                  
+                    setMovie(movie)
+                    setMovieVideos(videos)
+                    setMovieCredits(credits)
+                    setMovieSimilar(similar)
+
+
+
+                })
+                
+        }
+
+
+        getAllData()
+    }, [])
+
+    return (
+        <>
+            {movie && (
+                <>
+                    <Background image={getImages(movie.backdrop_path)} />
+
+                    <Container >
+                        <Cover>
+                            <img src={getImages(movie.poster_path)} />
+                        </Cover>
+                        <Info>
+                            <h2>{movie.title}</h2>
+                            <SpanGenres genres={movie.genres} />
+                            <p>{movie.overview}</p>
+                            <Credits credits={movieCredits}>Créditos</Credits>
+                        </Info>
+                        <div>Detalhe</div>
+                    </Container>
+                    <ContainerMovies>
+                        {Array.isArray(movieVideos) && movieVideos.map((video) => (
+                            <div key={video.id}>
+                                <h4>{video.name}</h4>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${video.key}`}
+                                    title='Youtube Video Player'
+                                    height='31.25rem'
+                                    width='100%'
+
+                                > </iframe>
+                            </div>
+                        ))
+                        }
+
+
+                    </ContainerMovies>
+                    {movieSimilar && <Slider info={movieSimilar} title={'Top Similares'}/>}
+
+                  
+                </>
+
+            )}
+        </>
+
+    )
+}
+
+
+export default Detail
