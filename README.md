@@ -83,6 +83,6 @@ Configuração de ambiente com Vite, ESLint e Prettier
 Uso de aliases com Yarn para melhorar legibilidade
 
 👨‍💻 Autor
-Yan Isonel Pereira 📞 +55 35 9 9214-4176 📧 ysogeek@hotmail.com 🔗 LinkedIn 🐙 GitHub
+Yan Isonel Pereira 📞 +55 35 9 9214-4176 📧 ysogeek@hotmail.com 
 
 

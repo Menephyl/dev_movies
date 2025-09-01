@@ -1,4 +1,6 @@
 import api from './api'
+
+
 export async function getMovies() {
 
     const {
@@ -89,3 +91,21 @@ export async function getMovieById(movieId) {
 
     return data
 }
+
+export async function getAiringTodaySeries() {
+    const {
+        data: { results }
+    } = await api.get('/tv/airing_today');
+    return results;
+}
+
+export async function getOnTheAirSeries() {
+    const {
+        data: { results }
+    } = await api.get('/tv/on_the_air');
+    return results;
+}
+
+
+
+

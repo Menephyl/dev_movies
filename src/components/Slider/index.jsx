@@ -9,8 +9,19 @@ function Slider({ info = [], title }) {
                 grabCursor
                 spaceBetween={10}
                 slidesPerView={'auto'}
+                autoplay={{ delay: 3000 }}
+                pagination={{ clickable: true }}
+                // breakpoints={{
+                //     640: { slidesPerView: 2 },
+                //     768: { slidesPerView: 3 },
+                //     1024: { slidesPerView: 4 },
+                // }}
                 className="swiper"
-                pagination={{ clickable: true }} // Adiciona paginação se necessário
+                
+                
+
+
+                
             >
                 {
                     Array.isArray(info) && info.map((item, index) => (
@@ -20,7 +31,7 @@ function Slider({ info = [], title }) {
                     ))
                 }
             </Swiper>
-        </Container>
+        </Container >
     );
 }
 

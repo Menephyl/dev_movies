@@ -4,7 +4,7 @@ import Logo from '../../assets/logo01.png'
 import {useState} from  'react'
 function Header() {
     const [changeBackground, setChangeBackground] = useState(false)
-    const { pathname } = useLocation() // desestruturação 
+    const { pathname } = useLocation()  
 
     window.onscroll = () => {
         if (!changeBackground && window.pageYOffset > 100) {
@@ -28,6 +28,9 @@ function Header() {
                 </Li>
                 <Li $isActive={pathname.includes('series')}>
                     <Link to="/series">Séries</Link>
+                </Li>
+                 <Li $isActive={pathname.includes('animes')}>
+                    <Link to="/animes">Animes</Link>
                 </Li>
             </Menu>
         </Container>
