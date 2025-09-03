@@ -27,13 +27,13 @@ const styles = {
   },
   card: {
     flex: '0 0 auto',
-    width: '160px',
+    width: '10rem',
     cursor: 'pointer',
     transition: 'transform 0.2s',
   },
   thumb: {
     width: '100%',
-    height: '240px',
+    height: '15rem',
     objectFit: 'cover',
     borderRadius: '8px',
   },

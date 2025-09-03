@@ -14,9 +14,12 @@ export const Background = styled.div`
 
 export const Container = styled.div`
 
-    display: flex;
+     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
+    width: 100vw;
+    max-width: 80rem;
+    padding: 3rem 1rem;
     top: 3rem;
     left: 0;
     align-items: center;

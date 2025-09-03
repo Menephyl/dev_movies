@@ -11,11 +11,11 @@ function Slider({ info = [], title }) {
                 slidesPerView={'auto'}
                 autoplay={{ delay: 3000 }}
                 pagination={{ clickable: true }}
-                // breakpoints={{
-                //     640: { slidesPerView: 2 },
-                //     768: { slidesPerView: 3 },
-                //     1024: { slidesPerView: 4 },
-                // }}
+                breakpoints={{
+                    640: { slidesPerView: 2 },
+                     768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                 }}
                 className="swiper"
                 
                 

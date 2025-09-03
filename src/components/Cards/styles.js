@@ -23,3 +23,8 @@ margin-top: 0.938rem;
 }
 
 `
+
+export const Cards = styled.div`
+  width: 10rem;
+  flex: 0 0 auto;
+`;

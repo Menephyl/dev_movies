@@ -43,7 +43,7 @@ function Movies() {
                 <Container>
                     {nowPlayingMovies.length > 0 && <Slider info={nowPlayingMovies} title={'Em Cartaz'} />}
                     {upcomingMovies.length > 0 && <Slider info={upcomingMovies} title={'Próximas Estreias'} />}
-                    {topMovies.length > 0 && <Slider info={topMovies} title={'Mais Bem Avaliados'} />}
+                    {topMovies.length > 0 && <Slider info={topMovies} title={'Top Avaliados'} />}
                     {popularMovies.length > 0 && <Slider info={popularMovies} title={'Populares'} />}
                 </Container>
             </Background>

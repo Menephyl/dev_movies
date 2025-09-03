@@ -13,7 +13,6 @@ from{
 export const Background = styled.div`
 
 background-image: url(${props => props.img});
-
 height: 100vh;
 background-position: center;
 background-size:cover;
@@ -28,11 +27,10 @@ justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-color: rgb(0, 0, 0, 0.5);
 }
- 
- 
+
 `
 export const Container = styled.div`
 display: flex;
@@ -58,13 +56,14 @@ export const Info = styled.div`
     margin-top: 1.8rem;
     margin-bottom:1.5rem;
  }
+
  `
 export const Poster = styled.div`
 margin-top:5rem;
  z-index: 98;
  
  img{
-    width: 400px;
+    width: 25rem;
     border-radius:1.5rem;
     z-index: 2;
     animation: ${scale} 0.5s linear;

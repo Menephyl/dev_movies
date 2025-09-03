@@ -8,8 +8,8 @@ border: 3px solid #ffffff;
 background: transparent;
 color: #ffffff;
 border-radius: 30px;
-padding: 10px 20px;
-font-size: 20px;
+padding: 0.625rem 1.2rem;
+font-size: 1.25rem;
 font-weight:500;
 
 &:hover{
@@ -23,12 +23,12 @@ export const ButtonR = styled.button`
 ${buttonStyles}
 
 background: #ff0000;
-border: 4px solid transparent;
+border: 0.25rem solid transparent;
 color: #fff;
-box-shadow:0px 0px 7px 8px rgb(255 0 0 / 30%) ;
+box-shadow:0px 0px 0.438rem 0.438rem rgb(255 0 0 / 30%) ;
 
 &:hover{
-    box-shadow:0px 0px 7px 15px rgb(255 0 0 / 30%);
+    box-shadow:0px 0px 0.438rem 0.938rem rgb(255 0 0 / 30%);
     background:#ff0000;
     color:#fffFFF;
 

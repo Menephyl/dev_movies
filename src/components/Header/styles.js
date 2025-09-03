@@ -5,19 +5,26 @@ export const Container = styled.div`
 min-height: 4rem;
 z-index: 99;
 position: fixed;
-top: 0;
+top:0.5rem;
 display: flex;
 justify-content: space-between;
 padding: 2.5rem 2rem 2rem 2rem;
 align-items: center;
 height: 4rem;
 width: 100%;
-background-color: ${props =>( props.$changeBackground ? '#000' :'transparent')};
-transition: background-color 1s ease-in-out;
+background-color: ${props => (props.$changeBackground ? '#000' : 'transparent')};
+transition: background-color 1s ease-in-out ;
+
 img{
     width: 25%; 
     height: auto;
 }
+
+
+
+
+
+
 
 `
 
@@ -25,6 +32,9 @@ export const Menu = styled.ul`
 display: flex;
 list-style: none;
 gap: 3.25rem;
+
+
+
 
 `
 export const Li = styled.li`
@@ -34,6 +44,8 @@ cursor: pointer;
 font-size: 2rem;
 padding-bottom: 0.2rem;
 position: relative;
+
+
 a{
     color: #ffffff;
     text-decoration: none;
@@ -41,7 +53,7 @@ a{
 
 &::after{
     content: '';
-    height: 3px;
+    height: 0.2rem;
     width: ${(props) => (props.$isActive ? '100%' : '0')};
     background-color: #fff700ff;
     position: absolute;
@@ -53,5 +65,10 @@ a{
 
 &:hover::after{
     width: 100%;
+
+
 }
+
 `
+
+
