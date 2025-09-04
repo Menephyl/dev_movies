@@ -14,17 +14,14 @@ height: 4rem;
 width: 100%;
 background-color: ${props => (props.$changeBackground ? '#000' : 'transparent')};
 transition: background-color 1s ease-in-out ;
-
+@media (max-width: 600px) {
+    background-color: green; // Muda a cor do botão em telas pequenas
+    padding: 5px 10px; // Altera o padding em telas pequenas
+    }
 img{
     width: 25%; 
     height: auto;
 }
-
-
-
-
-
-
 
 `
 
@@ -32,9 +29,6 @@ export const Menu = styled.ul`
 display: flex;
 list-style: none;
 gap: 3.25rem;
-
-
-
 
 `
 export const Li = styled.li`
@@ -44,7 +38,6 @@ cursor: pointer;
 font-size: 2rem;
 padding-bottom: 0.2rem;
 position: relative;
-
 
 a{
     color: #ffffff;
