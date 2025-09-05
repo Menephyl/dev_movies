@@ -11,10 +11,17 @@ border-radius: 30px;
 padding: 0.625rem 1.2rem;
 font-size: 1.25rem;
 font-weight:500;
-
+@media (max-width:600px) {
+    padding: 10px;
+    margin: 0;
+    font-size:12px;
+   
+}
 &:hover{
     color: red;
     background: #ffffff;
+    font-weight:500;
+
 }
 
 `

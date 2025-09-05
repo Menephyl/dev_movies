@@ -16,6 +16,15 @@ left: -6.25rem;
     background: #000;
     padding: 0 1.20rem;
     margin-bottom: 2rem;
+
+@media (max-width:600) {
+    display: flex;
+    flex-direction: column;
+    left:0;
+    margin: 0 auto;
+    max-width: 350px;
+   
+}
     h2 {
         color: #ffffff;
         font-size: 1.8rem;
